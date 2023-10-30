@@ -1,7 +1,11 @@
 import { Module } from '@nestjs/common';
 import { ProductsModule } from './products/products.module';
+import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [ProductsModule],
+  imports: [
+    MongooseModule.forRoot('mongodb://127.0.0.1:27017/open-ds'),
+    ProductsModule,
+  ],
 })
 export class AppModule {}
