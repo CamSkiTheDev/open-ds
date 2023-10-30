@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
+import * as AliProductScraper from 'aliexpress-product-scraper';
 
 @Injectable()
 export class ProductsService {
@@ -8,8 +9,8 @@ export class ProductsService {
     return 'This action adds a new product';
   }
 
-  findAll() {
-    return `This action returns all products`;
+  async findAll() {
+    return await AliProductScraper('2255800692211273');
   }
 
   findOne(id: number) {
