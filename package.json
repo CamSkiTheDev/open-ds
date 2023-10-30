@@ -1,0 +1,9 @@
+{
+  "name": "open-ds",
+  "version": "1.0.0",
+  "workspaces": [
+    "api"
+  ],
+  "private": true,
+  "license": "MIT"
+}
