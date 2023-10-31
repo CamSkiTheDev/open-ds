@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ProductsModule } from './products/products.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import { BullModule } from '@nestjs/bull';
 
 @Module({
   imports: [
@@ -9,6 +10,12 @@ import { MongooseModule } from '@nestjs/mongoose';
         // eslint-disable-next-line @typescript-eslint/no-var-requires
         connection.plugin(require('mongoose-autopopulate'));
         return connection;
+      },
+    }),
+    BullModule.forRoot({
+      redis: {
+        host: 'localhost',
+        port: 6379,
       },
     }),
     ProductsModule,
