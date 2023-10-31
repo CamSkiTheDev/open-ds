@@ -20,12 +20,14 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@nestjs/bull": "^10.0.1",
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/mapped-types": "*",
     "@nestjs/mongoose": "^10.0.1",
     "@nestjs/platform-express": "^10.0.0",
     "aliexpress-product-scraper": "https://github.com/CamSkiTheDev/aliexpress-product-scraper",
+    "bull": "^4.11.4",
     "mongoose": "^7.6.3",
     "mongoose-autopopulate": "^1.1.0",
     "reflect-metadata": "^0.1.13",
